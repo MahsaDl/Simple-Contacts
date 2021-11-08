@@ -28,7 +28,7 @@
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/cab_send_email_to_contacts"
-        android:icon="@drawable/ic_email_vector"
+        android:icon="@drawable/ic_block_vector"
         android:title="@string/send_email_to_contacts"
         app:showAsAction="ifRoom" />
     <item

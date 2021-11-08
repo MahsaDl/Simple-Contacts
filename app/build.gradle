@@ -13,6 +13,10 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
+        configurations.all {
+            resolutionStrategy { force 'androidx.core:core-ktx:1.6.0' }
+        }
+
         applicationId "com.simplemobiletools.contacts.pro"
         minSdkVersion 21
         targetSdkVersion 30
@@ -56,11 +60,11 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.SimpleMobileTools:Simple-Commons:c1388a0721'
     implementation 'joda-time:joda-time:2.10.3'
     implementation 'com.googlecode.ez-vcard:ez-vcard:0.10.5'
     implementation 'com.github.tibbi:IndicatorFastScroll:c3de1d040a'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation project(path: ':app:commons')
 
     kapt "androidx.room:room-compiler:2.3.0"
     implementation "androidx.room:room-runtime:2.3.0"
